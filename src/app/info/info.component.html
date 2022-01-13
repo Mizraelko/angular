@@ -1,0 +1,61 @@
+          <!--ИНТЕРПОЛЯЦИЯ- внутри скобок можно писать простейшие js операции-->
+<!--<div><strong>{{title}}</strong></div>-->
+<!--<hr>-->
+          <!--ИНТЕРПОЛЯЦИЯ- внутри скобок можно писать простейшие js операции-->
+
+          <!--ОДНОСТОРОНИЕ СВЯЗЫВНИЕ HTML-TS-->
+<!--&lt;!&ndash;одностороний binding - ЕСЛИ что-то обёрнуто в [] - то после = в скобках можно писать JS. Связка из HTML в TS &ndash;&gt;-->
+<!--<img [src]="img" [alt]="alt">-->
+<!--Обработчики события-->
+<!--&lt;!&ndash;ОБЫЧНЫЙ ОБРАБОТЧИК ИНПУТА&ndash;&gt;-->
+<!--<input type="`text`" (input)="onInput($event)" >-->
+<!--<p><strong>{{inputValue}}</strong></p>-->
+<!--&lt;!&ndash;Срабатывает только при отпускание клавиши указанной в обработчике(можно назначить любой эвент) onBlur с ref(локальная ссылка на элемент) = #myInput&ndash;&gt;-->
+<!--<input-->
+<!--  type="`text`"-->
+<!--  (keyup.enter)="onKeyApp($event)"-->
+<!--  (blur)="onBlur(myInput.value)"-->
+<!--  #myInput-->
+<!--&gt;-->
+<!--<p><strong>{{keyAndBlurValue}}</strong></p>-->
+          <!--ОДНОСТОРОНИЕ СВЯЗЫВНИЕ HTML  -> TS-->
+
+          <!--2-ИЕ СВЯЗЫВНИЕ(binding) HTML <-> TS-->
+          <!--ОБЫЧНОЕ СВЯЗЫВАНИЕ БЕЗ МОДУЛЯ FORM HTML <-> TS-->
+<!--<input type="text" [value]="title" (input)="onInput($event)">-->
+<!--          ngModel - выполняет связывание [] одностороние () двустроние-->
+<!--          <input type="text" [(ngModel)]="inputValue">-->
+<!--          <p>{{inputValue}}</p>-->
+          <!--КОНЕЦ 2-ИЕ СВЯЗЫВНИЕ(binding) HTML <-> TS-->
+          <!--ДЕРЕКТИВЫ - доп.аттрибуты для управления HTML-элементами, если структурные(позволяют изменять HTML шаблон) то впереди ставится *-->
+<!-- если нужно просто менять какое-то свойсто в одну строчку(или вообще функцию можно тут описать) [ngStyle] с помощью данной дерективы можно динамичски менять стили-->
+<!--<button (click)="backgroundToggle = !backgroundToggle">Toggle</button>-->
+<!--<div [ngStyle]="{-->
+<!--  width: '100px',-->
+<!--  height: '200px',-->
+<!--  borderRadius: '5px',-->
+<!--  border: '1px solid red',-->
+<!--  background: backgroundToggle ? 'red' : 'blue'-->
+<!--}"></div>-->
+          <!-- [ngClass] с помощью данной дерективы можно динамически менять классы [название класса]: значение(условия, или тернарные операторы)-->
+<!--<button (click)="backgroundToggle = !backgroundToggle">Toggle</button>-->
+<!--<div [ngClass]="{-->
+<!--  red: backgroundToggle,-->
+<!--  aqua: !backgroundToggle-->
+<!--}"></div>-->
+          <!-- 2-ой способ добавление классов, через binding -->
+<!--          <button (click)="backgroundToggle = !backgroundToggle">Toggle</button>-->
+<!--          <div-->
+<!--            [class.red]="backgroundToggle"-->
+<!--            [class.aqua]="!backgroundToggle"-->
+<!--          ></div>-->
+          <!--КОНЕЦ ДЕРЕКТИВЫ - доп.аттрибуты для управления HTML-элементами-->
+
+          <!-- [ngIf] синтаксис [условия или тернарники]; else и указываем блок по условию -->
+          <button (click)="toggle = !toggle">Toggle</button>
+<p *ngIf="toggle; else blueP" class="aqua">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, quasi.</p>
+<!--  контейнер для показа по условию else #ref-->
+ <ng-template #blueP>
+   <p  class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, quasi.</p>
+ </ng-template>
+

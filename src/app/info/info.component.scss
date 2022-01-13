@@ -1,0 +1,15 @@
+$width: 300px;
+$height: 300px;
+$border: 1px solid black;
+.red {
+  background: red;
+  width: $width;
+  height: $height;
+  border: $border;
+}
+.aqua {
+  background: aqua;
+  width: $width;
+  height: $height;
+  border: $border;
+}
