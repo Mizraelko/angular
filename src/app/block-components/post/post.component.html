@@ -3,4 +3,5 @@
   <p>{{post.text}}</p>
   <!--Другой способ передачи в компонент(типа props.children)-->
   <ng-content></ng-content>
+  <button class="btn" (click)="removePost()">&times;</button>
 </div>

@@ -7,8 +7,9 @@
   <hr>
   <!--передать параметры в компонент-->
   <app-post
-    *ngFor="let p of posts"
+    *ngFor="let p of posts; let idx = index"
     [post]="p"
+    (onRemove)="removePost($event)"
   >
     <!--Другой способ передачи в компонент(типа props.children) имеем доступ до родительских пропсов-->
     <!--Получение долступа до child-->

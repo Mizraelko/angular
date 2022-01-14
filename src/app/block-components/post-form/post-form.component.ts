@@ -16,8 +16,6 @@ export class PostFormComponent implements OnInit {
   title: string = "";
   text: string = "";
 
-  constructor() { }
-
   ngOnInit(): void {
   }
 
@@ -35,7 +33,8 @@ export class PostFormComponent implements OnInit {
       //Метод экземпляра класса EventEmitter - принемает данные, которые мы хотим отправить на ружу(короче калбэк от родителя)
       this.onAdd.emit({
         title: this.title,
-        text: this.text
+        text: this.text,
+        id: Math.floor(Math.random() * 100)
       })
     }
     this.title = this.text = ""
