@@ -52,10 +52,44 @@
           <!--КОНЕЦ ДЕРЕКТИВЫ - доп.аттрибуты для управления HTML-элементами-->
 
           <!-- [ngIf] синтаксис [условия или тернарники]; else и указываем блок по условию -->
-          <button (click)="toggle = !toggle">Toggle</button>
-<p *ngIf="toggle; else blueP" class="aqua">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, quasi.</p>
+<!--          <button (click)="toggle = !toggle">Toggle</button>-->
+<!--<p *ngIf="toggle; else blueP" class="aqua">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, quasi.</p>-->
 <!--  контейнер для показа по условию else #ref-->
- <ng-template #blueP>
-   <p  class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, quasi.</p>
- </ng-template>
+<!-- <ng-template #blueP>-->
+<!--   <p  class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, quasi.</p>-->
+<!-- </ng-template>-->
+          <!-- [ngIf] -->
+          <!-- [ngSwitch] -->
+<!--          <button (click)="toggle = !toggle">Toggle</button>-->
+<!--          <div [ngSwitch]="toggle">-->
+<!--            <p *ngSwitchCase="true" class="red">Lorem ipsum.</p>-->
+<!--            <p *ngSwitchCase="false" class="aqua">Lorem ipsum dolor sit.</p>-->
+<!--            <p *ngSwitchDefault >Lorem ipsum dolor sit.</p>-->
+<!--          </div>-->
+          <!-- [ngSwitch] -->
+          <!-- [ngFor] -->
+<!--          <ul>-->
+<!--            <li *ngFor="let number of arr; let i = index">-->
+<!--            {{i + 1}}  <strong>{{number}}</strong>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--          <ul style="list-style: none">-->
+<!--            <li *ngFor="let info of objs">-->
+<!--              <p>{{info.title}} <b>{{info.author}}</b></p>-->
+<!--              <ul>-->
+<!--                <li *ngFor="let comment of info.comment">-->
+<!--                  <div>-->
+<!--                    <small>{{comment.name}}</small>-->
+<!--                    <p>{{comment.text}}</p>-->
+<!--                  </div>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </li>-->
+<!--          </ul>-->
+          <!-- [ngFor] -->
+          <!-- Pipe - трансформеруют отображение элементов (чейнить - выстраивать пайпы в очередь) -->
+<!--          <p>-->
+<!--            {{now | date: "long" | uppercase}}-->
+<!--          </p>-->
+          <!-- Pipe -->
 

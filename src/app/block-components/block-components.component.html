@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Angular Components</h1>
+  <!--забрать инфу у компонента-->
+  <app-post-form
+    (onAdd)="updatePost($event)"
+  ></app-post-form>
+  <hr>
+  <!--передать параметры в компонент-->
+  <app-post
+    *ngFor="let p of posts"
+    [post]="p"
+  >
+    <!--Другой способ передачи в компонент(типа props.children) имеем доступ до родительских пропсов-->
+    <!--Получение долступа до child-->
+    <div #child>
+      <small *ngIf="p.text.length > 10; else short">Пост длинный</small>
+        <ng-template #short>
+          <small>Пост короткий</small>
+        </ng-template>
+    </div>
+  </app-post>
+</div>
