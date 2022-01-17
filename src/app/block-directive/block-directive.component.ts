@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./block-directive.component.scss']
 })
 export class BlockDirectiveComponent implements OnInit {
-
+  isVisible = true;
   constructor() { }
 
   ngOnInit(): void {

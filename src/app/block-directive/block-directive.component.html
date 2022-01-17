@@ -2,4 +2,20 @@
 <!--  вешаем дерективу на элемент, а в constructor определяем реф на данную дерективу-->
   <!--передача параметра внутрь дерективы styleDirective-->
   <h1 appStyle = "red" [dStyle] = "{ fontSize:23, fontStyle:'italic' }">Angular directive</h1>
+
+  <button class="btn" (click)="isVisible = !isVisible">Toggle</button>
+<!--    *в дерективе говорит о том, что создаётся то, что создаётся ng-template и свойство байндится-->
+<!--  <div *ngIf="isVisible" class="wrapper">-->
+<!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias deserunt dignissimos dolorem exercitationem minima odio optio tenetur velit veniam.</p>-->
+<!--  </div>-->
+<!--  <ng-template [ngIf]="isVisible">-->
+<!--      <div class="wrapper">-->
+<!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias deserunt dignissimos dolorem exercitationem minima odio optio tenetur velit veniam.</p>-->
+<!--      </div>-->
+<!--  </ng-template>-->
+<!--  тут с использование дерективы ifNot-->
+
+  <div class="wrapper" *appIfNot="!isVisible">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias deserunt dignissimos dolorem exercitationem minima odio optio tenetur velit veniam.</p>
+  </div>
 </div>
