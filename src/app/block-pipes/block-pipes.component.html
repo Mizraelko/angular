@@ -1,0 +1,45 @@
+<div class="container">
+  <h1>Angular Pipes</h1>
+  <!--  синтаксис [pipe: param : param]-->
+  <!--  Числовой пайп - синтаксис number: ["сколько чисел до точки[. диапозон чисел после запятой через -]"-->
+  <!--  <p>-->
+  <!--    {{e | number: '1.1-5' }}-->
+  <!--  </p>-->
+  <!--  <p>-->
+  <!--    {{e | number: '3.1-2' }}-->
+  <!--  </p>-->
+  <!--  Строковые пайпы - вызывая пайпы последовательно последний будет выведен. titlecase - каждое слово с больщой буквы, slice: 1: -1 -->
+  <!--    <p>-->
+  <!--      {{ str | uppercase | lowercase | titlecase }}-->
+  <!--    </p>-->
+  <!--    <p>-->
+
+  <!--    {{ str | slice: 1 : 6  }}-->
+  <!--    </p>-->
+  <!--  другие пайпы-->
+<!--  <p>-->
+<!--    {{ float}}-->
+<!--  </p>-->
+<!--  currency - приводит к валюте-->
+<!--  <p>-->
+<!--    {{ float | currency}}-->
+<!--  </p>-->
+  <!--  percent - приводит к процентам можно указывать значния, как для number pipes-->
+<!--  <p>-->
+<!--    {{ float | percent}}-->
+<!--  </p>-->
+<!--<p> {{ "Учу ангуляр" | mult: [1, -1]}}</p>-->
+<!--  <input type="text" [(ngModel)]="search"/>-->
+<!--  <button class="btn" (click)="searchField = 'title'">search title</button>-->
+<!--  <button class="btn" (click)="searchField = 'text'">search text</button>-->
+<!--<div-->
+<!--  *ngFor="let post of posts | mult: search: searchField"-->
+<!--  class="card"-->
+<!--&gt;-->
+<!--  <h2>{{post.title}}</h2>-->
+<!--  <p>{{post.text}}</p>-->
+
+<!--</div>-->
+<div >{{p | async}}</div>
+<div >{{date$ | async | date}}</div>
+</div>
