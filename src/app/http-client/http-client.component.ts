@@ -39,7 +39,7 @@ export class HttpClientComponent implements OnInit {
     this.loading = true;
     this.todoService.fetchTodo().subscribe(todos => {
       this.todos = todos;
-      this.loading = false;
+      this.loading = false
     });
   }
 
