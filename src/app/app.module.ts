@@ -1,20 +1,31 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {BrowserModule} from '@angular/platform-browser'
+import {NgModule} from '@angular/core'
 
-import { AppComponent } from './app.component';
-import {FormsModule} from "@angular/forms";
-import { BlockServicesComponent } from './block-services/block-services.component';
+import {AppComponent} from './app.component'
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { HttpClientComponent } from './http-client/http-client.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
-  declarations: [ //используемые компоненты
-    AppComponent, BlockServicesComponent
+  //компонентов
+  declarations: [
+    AppComponent,
+    HttpClientComponent,
   ],
+  //Модули подключаемые
   imports: [
+    //Что работаем в браузере
     BrowserModule,
-    FormsModule //Необходим для работы ngModel - связывание
+    //Формы
+    FormsModule,
+    //реактивные формы
+    ReactiveFormsModule,
+    //Для ajax запросов
+    HttpClientModule
   ],
-  //Подключаемые сервисы, если у сервеса есть Injectable, то сюда не обязательно писать зависимость
+  //Сервисы
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
